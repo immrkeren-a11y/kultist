@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Китай",
+    "year": 2025,
+    "cover": "/src/assets/images/01-1.webp"
+  },
+  {
+    "id": 2,
+    "title": "Скандинавия",
+    "year": 2026,
+    "cover": "/src/assets/images/01-1.webp"
+  }
+]
