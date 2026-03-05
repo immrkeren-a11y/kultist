@@ -62,6 +62,15 @@
   font-size: 24px;
   color: var(--light);
   text-decoration: none;
+  transition: all 0.15s;
+}
+
+.header-link:hover{
+  scale: 105%;
+}
+
+.header-link:active{
+  scale: 95%;
 }
 
 .header-icon {
@@ -70,8 +79,19 @@
   height: 32px;
 }
 
+
 .logo {
   width: 200px;
+  padding-top: 8px;
+  transition: all 0.15s;
+}
+
+.logo:hover{
+  scale: 105%;
+}
+
+.logo:active{
+  scale: 95%;
 }
 
 .bg{

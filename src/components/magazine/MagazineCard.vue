@@ -26,6 +26,7 @@ defineProps<{
   gap: 8px;
   text-decoration: none;
   color: var(--blue);
+  transition: all 0.15s;
 }
 
 .card h1{
@@ -36,5 +37,9 @@ defineProps<{
   min-width: 368px;
   width: 100%;
   height: auto;
+}
+
+.card:hover {
+  scale: 103%;
 }
 </style>

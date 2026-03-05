@@ -8,7 +8,8 @@
   :slides-per-group-skip="1"
   :navigation="true"
   :zoom="true"
-  :pagination="{ clickable: true }"
+  :pagination="{ type: 'progressbar' }"
+  
   class="mySwiper"
 >
 
@@ -54,7 +55,7 @@ const otherPages = computed(() => props.pages.slice(1))
 
 <style>
 .magazine{
-  max-width:1160px;
+  max-width:1200px;
   margin:0 auto;
   padding-top:100px;
   padding-bottom:50px;
@@ -65,7 +66,7 @@ const otherPages = computed(() => props.pages.slice(1))
 }
 
 .magazine-page{
-  height:calc(100vh - 150px);
+  max-height: 850px;
   width:auto;
   object-fit:contain;
 }
@@ -75,5 +76,9 @@ const otherPages = computed(() => props.pages.slice(1))
   justify-content: center;
   align-items: center;
   padding-right: 40px;
+}
+
+.swiper-pagination-progressbar-fill{
+  background-color: #434874;
 }
 </style>

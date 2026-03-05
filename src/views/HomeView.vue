@@ -75,7 +75,7 @@ onMounted(async () => {
 
         </div>
         <a
-        href="https://t.me/kultistissue"
+        href="https://t.me/kultistmagazine"
         target="_blank">
         <button class="button green-btn" >
           Перейти в канал

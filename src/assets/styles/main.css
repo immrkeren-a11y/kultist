@@ -1,1 +1,85 @@
-@import './base.css';
+@font-face {
+  font-family: "Zhirok";
+  src: url("@/assets/fonts/ZHIROK-TYPEFACE.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TT Jenevers";
+  src: url("@/assets/fonts/TTJeneversEdu-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT Rationalist";
+  src: url("@/assets/fonts/TTRationalistEdu-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+:root {
+  --light: #F3EFE9;
+  --blue: #434874;
+  --green: #ABFB2C;
+  --orange: #FF4900;
+
+  --swiper-pagination-color: var(--blue);
+  --swiper-navigation-color: var(--blue);
+  --container-width: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--light);
+  font-family: "TT Jenevers", sans-serif;
+  color: var(--blue);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.main-title {
+  font-family: "TT Rationalist", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -1px;
+}
+
+.text-regular {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.button {
+  font-family: "TT Rationalist", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.button:hover{
+  scale: 105%;
+}
+
+.button:active{
+  scale: 95%;
+}
