@@ -6,14 +6,21 @@
     "year": 2025,
     "cover": "/src/assets/images/01-1.webp",
     "pages": [
-      "/assets/issues/kultist1/01-1.webp",
-      "/assets/issues/kultist1/01-2.webp",
-      "/assets/issues/kultist1/01-3.webp",
-      "/assets/issues/kultist1/01-4.webp",
-      "/assets/issues/kultist1/01-5.webp",
-      "/assets/issues/kultist1/01-6.webp",
-      "/assets/issues/kultist1/01-7.webp",
-      "/assets/issues/kultist1/01-8.webp"
+      "/issue/kultist1/01-1.webp",
+      "/issue/kultist1/01-2.webp",
+      "/issue/kultist1/01-3.webp",
+      "/issue/kultist1/01-4.webp",
+      "/issue/kultist1/01-5.webp",
+      "/issue/kultist1/01-6.webp",
+      "/issue/kultist1/01-7.webp",
+      "/issue/kultist1/01-8.webp",
+      "/issue/kultist1/01-9.webp",
+      "/issue/kultist1/01-10.webp",
+      "/issue/kultist1/01-11.webp",
+      "/issue/kultist1/01-12.webp",
+      "/issue/kultist1/01-13.webp",
+      "/issue/kultist1/01-14.webp",
+      "/issue/kultist1/01-15.webp"
     ]
   },
   {
@@ -23,10 +30,10 @@
     "year": 2026,
     "cover": "/src/assets/images/01-1.webp",
     "pages": [
-      "/assets/issues/kultist1/01-1.webp",
-      "/assets/issues/kultist1/01-2.webp",
-      "/assets/issues/kultist1/01-3.webp",
-      "/assets/issues/kultist1/01-4.webp"
+      "@/assets/issue/kultist1/01-1.webp",
+      "@/assets/issue/kultist1/01-2.webp",
+      "@/assets/issue/kultist1/01-3.webp",
+      "@/assets/issue/kultist1/01-4.webp"
     ]
   }
 ]
