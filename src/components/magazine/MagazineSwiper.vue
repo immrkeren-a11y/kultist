@@ -2,20 +2,19 @@
 
   <div class="magazine">
 <Swiper
+  :modules="[Navigation, Pagination]"
   :slidesPerView="2"
   :slidesPerGroup="2"
+  :slides-per-group-skip="1"
   :navigation="true"
-  :grabCursor="true"
+  :zoom="true"
   :pagination="{ clickable: true }"
   class="mySwiper"
 >
 
-  <!-- первая страница -->
   <SwiperSlide class="cover-slide">
     <img :src="firstPage" class="magazine-page">
   </SwiperSlide>
-
-  <!-- остальные страницы -->
   <SwiperSlide
     v-for="(page, index) in otherPages"
     :key="index"
@@ -31,14 +30,14 @@
 
 import { computed } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination} from 'swiper/modules'
 
   import 'swiper/css';
 
+  import 'swiper/css/zoom';
   import 'swiper/css/scrollbar';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
-
-
 
 
 const props = defineProps<{
@@ -55,7 +54,7 @@ const otherPages = computed(() => props.pages.slice(1))
 
 <style>
 .magazine{
-  max-width:1200px;
+  max-width:1160px;
   margin:0 auto;
   padding-top:100px;
   padding-bottom:50px;
@@ -63,8 +62,6 @@ const otherPages = computed(() => props.pages.slice(1))
 
 .swiper-slide{
   display:flex;
-  justify-content:center;
-  align-items:center;
 }
 
 .magazine-page{
@@ -72,11 +69,11 @@ const otherPages = computed(() => props.pages.slice(1))
   width:auto;
   object-fit:contain;
 }
-.cover-slide {
 
-  width: 100% !important;
+.cover-slide {
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  padding-right: 40px;
 }
 </style>
