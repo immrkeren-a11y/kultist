@@ -4,7 +4,7 @@
     "title": "Китай",
     "slug": "china",
     "year": 2025,
-    "cover": "/src/assets/images/01-1.webp",
+    "cover": "/issue/kultist1/01-1.webp",
     "pages": [
       "/issue/kultist1/01-1.webp",
       "/issue/kultist1/01-2.webp",
@@ -21,19 +21,6 @@
       "/issue/kultist1/01-13.webp",
       "/issue/kultist1/01-14.webp",
       "/issue/kultist1/01-15.webp"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Скандинавия",
-    "slug": "scandinavia",
-    "year": 2026,
-    "cover": "/src/assets/images/01-1.webp",
-    "pages": [
-      "@/assets/issue/kultist1/01-1.webp",
-      "@/assets/issue/kultist1/01-2.webp",
-      "@/assets/issue/kultist1/01-3.webp",
-      "@/assets/issue/kultist1/01-4.webp"
     ]
   }
 ]
