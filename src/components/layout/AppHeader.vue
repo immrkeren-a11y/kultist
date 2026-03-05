@@ -60,7 +60,7 @@
 
   font-family: "TT Rationalist";
   font-size: 24px;
-  color: #F3EFE9;
+  color: var(--light);
   text-decoration: none;
 }
 

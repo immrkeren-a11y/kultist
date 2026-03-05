@@ -1,16 +1,18 @@
 <template>
-  <div class="card">
-    <h1>{{ magazine.title }}</h1>
-    <img :src="magazine.cover" :alt="magazine.title" />
-    <p>{{ magazine.year }}</p>
-  </div>
+  <router-link
+    :to="`/issue/${issue.slug}`" class="card"
+    >
+    <h1>{{ issue.title }}</h1>
+    <img :src="issue.cover" :alt="issue.title" />
+    <p>{{ issue.year }}</p>
+  </router-link>
 </template>
 
 <script setup lang="ts">
-import type { Magazine } from '@/services/api'
+import type { Issues } from '@/services/api'
 
 defineProps<{
-  magazine: Magazine
+  issue: Issues
 }>()
 </script>
 
@@ -22,6 +24,8 @@ defineProps<{
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-decoration: none;
+  color: var(--blue);
 }
 
 .card h1{

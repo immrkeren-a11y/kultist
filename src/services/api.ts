@@ -15,21 +15,22 @@ export async function getJournalById(id: string): Promise<JournalDetails> {
   return await res.json()
 }
 */
-import magazines from '@/data/magazines.json'
+import issues from '@/data/issues.json'
 
-export interface Magazine {
+export interface Issues {
   id: number
   title: string
+  slug: string
   year: number
   cover: string
-  description: string
+  pages: [string]
 }
 
-export const getMagazines = async (): Promise<Magazine[]> => {
+export const getIssues = async (): Promise<Issues[]> => {
   // имитация задержки сервера
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(magazines as Magazine[])
+      resolve(issues as Issues[])
     }, 200)
   })
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { getMagazines, type Magazine } from '@/services/api'
+import { getIssues, type Issues } from '@/services/api'
 import MagazineCard from '@/components/magazine/MagazineCard.vue'
 
 const issuesSection = ref<HTMLElement | null>(null)
@@ -9,10 +9,10 @@ const scrollToIssues = () => {
   issuesSection.value?.scrollIntoView({ behavior: 'smooth' })
 }
 
-const magazines = ref<Magazine[]>([])
+const issues = ref<Issues[]>([])
 
 onMounted(async () => {
-  magazines.value = await getMagazines()
+  issues.value = await getIssues()
 })
 </script>
 
@@ -75,7 +75,7 @@ onMounted(async () => {
 
         </div>
         <a
-        href="https://t.me/kultistmagazine"
+        href="https://t.me/kultistissue"
         target="_blank">
         <button class="button green-btn" >
           Перейти в канал
@@ -96,9 +96,9 @@ onMounted(async () => {
   <div class="container">
       <div class="issues-grid">
       <MagazineCard
-              v-for="mag in magazines"
+              v-for="mag in issues"
               :key="mag.id"
-              :magazine="mag"
+              :issue="mag"
             />
       </div>
     </div>
