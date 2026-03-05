@@ -1,57 +1,82 @@
 <template>
 
   <div class="magazine">
+<Swiper
+  :slidesPerView="2"
+  :slidesPerGroup="2"
+  :navigation="true"
+  :grabCursor="true"
+  :pagination="{ clickable: true }"
+  class="mySwiper"
+>
 
-    <Swiper
-      :slides-per-view="1"
-      :space-between="20"
-      :navigation="true"
-      :pagination="{ clickable: true,
-        type: 'progressbar'
-      }"
-    >
+  <!-- первая страница -->
+  <SwiperSlide class="cover-slide">
+    <img :src="firstPage" class="magazine-page">
+  </SwiperSlide>
 
-      <SwiperSlide
-        v-for="(page, index) in pages"
-        :key="index"
-      >
-        <img
-          :src="page"
-          class="magazine-page"
-        >
-      </SwiperSlide>
+  <!-- остальные страницы -->
+  <SwiperSlide
+    v-for="(page, index) in otherPages"
+    :key="index"
+  >
+    <img :src="page" class="magazine-page">
+  </SwiperSlide>
 
-    </Swiper>
-
+</Swiper>
   </div>
 </template>
 
 <script setup lang="ts">
 
+import { computed } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+  import 'swiper/css';
+
+  import 'swiper/css/scrollbar';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
 
 
-defineProps<{
+
+
+const props = defineProps<{
   pages: string[]
 }>()
+
+/* первая страница */
+const firstPage = computed(() => props.pages[0])
+
+/* остальные страницы */
+const otherPages = computed(() => props.pages.slice(1))
 
 </script>
 
 <style>
-.magazine {
-
-  width: 900px;
-  margin: 120px auto;
-
+.magazine{
+  max-width:1200px;
+  margin:0 auto;
+  padding-top:100px;
+  padding-bottom:50px;
 }
 
-.magazine-page {
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-  width: 100%;
-  height: auto;
+.magazine-page{
+  height:calc(100vh - 150px);
+  width:auto;
+  object-fit:contain;
+}
+.cover-slide {
 
-}</style>
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+
+}
+</style>
