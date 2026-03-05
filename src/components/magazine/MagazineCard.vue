@@ -24,7 +24,7 @@ defineProps<{
   gap: 8px;
 }
 
-h1{
+.card h1{
   text-transform: uppercase;
   font-family:'Zhirok', sans-serif;
 }

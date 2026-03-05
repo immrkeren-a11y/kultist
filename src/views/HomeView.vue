@@ -74,10 +74,13 @@ onMounted(async () => {
           </p>
 
         </div>
-
-        <button class="button green-btn">
+        <a
+        href="https://t.me/kultistmagazine"
+        target="_blank">
+        <button class="button green-btn" >
           Перейти в канал
         </button>
+        </a>
 
       </div>
 
@@ -85,7 +88,7 @@ onMounted(async () => {
   </section>
 
   <section
-    ref="issuesSection" class="issues-label">
+    id="issuesSection" ref="issuesSection"  class="issues-label">
     Выпуски журнала
   </section>
 
@@ -105,7 +108,7 @@ onMounted(async () => {
 
 <style>
 .hero {
-  padding-top: 200px;
+  padding-top: 160px;
 }
 
 .hero-inner {

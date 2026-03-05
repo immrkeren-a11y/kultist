@@ -52,6 +52,10 @@ body {
   color: var(--blue);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* ===== Container ===== */
 
 .container {

@@ -11,12 +11,24 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/journal/:id',
+      path: '/journal/:slug',
       name: 'journal',
       component: JournalView,
       props: true
     }
-  ]
+  ],
+  scrollBehavior(to) {
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    }
+
+    return { top: 0 }
+
+  }
 })
 
 export default router
